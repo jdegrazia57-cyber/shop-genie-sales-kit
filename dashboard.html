@@ -4,8 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shop Genie – Dashboard</title>
+
+  <!-- Favicon + Styles -->
   <link rel="icon" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Dashboard logic -->
   <script src="app-pro.js" defer></script>
 </head>
 <body>
@@ -22,52 +26,45 @@
     </nav>
   </header>
 
-  <!-- Dashboard Section -->
+  <!-- Main content -->
   <main class="dashboard">
     <h1>Analytics Dashboard</h1>
-    <p>Upload a CSV to get instant KPIs, charts, and forecasts.</p>
+    <p class="muted">Upload a CSV (or use the built-in sample) to see KPIs, a chart, and a sortable table.</p>
 
-    <!-- CSV Upload -->
+    <!-- CSV upload -->
     <div class="upload-box">
       <input type="file" id="csvUpload" accept=".csv" />
-      <button onclick="loadCSV()">Upload</button>
+      <button type="button" onclick="loadCSV()">Upload</button>
+      <small class="muted">Tip: the app will also auto-load <code>sample-data.csv</code> if present.</small>
     </div>
 
-    <!-- KPI Cards -->
+    <!-- KPI cards -->
     <section id="kpis" class="kpis">
-      <div class="kpi-card">Revenue: $0</div>
-      <div class="kpi-card">Units: 0</div>
-      <div class="kpi-card">Margin: 0%</div>
+      <div class="kpi-card"><strong>—</strong><div>Total Revenue</div></div>
+      <div class="kpi-card"><strong>—</strong><div>Units</div></div>
+      <div class="kpi-card"><strong>—</strong><div>Avg Margin</div></div>
     </section>
 
-    <!-- Charts Area -->
+    <!-- Line chart -->
     <section id="charts" class="charts">
-      <h2>Charts</h2>
-      <canvas id="salesChart"></canvas>
-      <canvas id="funnelChart"></canvas>
-      <canvas id="forecastChart"></canvas>
+      <h2>Sales Over Time</h2>
+      <canvas id="salesChart" width="900" height="340" aria-label="Sales chart"></canvas>
     </section>
 
-    <!-- Data Table -->
+    <!-- Data table -->
     <section id="table" class="table-section">
       <h2>Data Table</h2>
       <table id="dataTable">
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Revenue</th>
-            <th>Units</th>
-            <th>Margin</th>
-          </tr>
-        </thead>
+        <thead></thead>
         <tbody></tbody>
       </table>
+      <small class="muted">Click a column header to sort.</small>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <p>© 2025 Shop Genie. Analytics made simple.</p>
+    <p>© 2025 Shop Genie — Built for fast sales demos</p>
   </footer>
 </body>
 </html>
