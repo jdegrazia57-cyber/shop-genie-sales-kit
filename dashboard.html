@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Genie — Dashboard</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Shop Genie logo" height="32">
+        <h1 style="font-size:16px;margin:0">Shop Genie</h1>
+      </div>
+      <nav class="nav">
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="index.html">Landing</a>
+      </nav>
+      <div class="badge">Black &amp; Teal UI</div>
+    </aside>
+
+    <header class="hdr">
+      <div class="left">
+        <input id="search" class="search" placeholder="Search (product, region, channel)…">
+      </div>
+      <div class="right" style="display:flex;gap:10px;align-items:center">
+        <label class="btn" for="file">Upload CSV</label>
+        <input id="file" type="file" accept=".csv" hidden>
+        <a class="btn" href="sample-data.csv" download>Sample CSV</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid">
+        <section class="kpis">
+          <div class="kpi" id="kpi-revenue"><h3>Total Revenue</h3><div class="val">$0</div><div class="trend">Sum of filtered rows</div></div>
+          <div class="kpi" id="kpi-units"><h3>Total Units</h3><div class="val">0</div><div class="trend">All channels</div></div>
+          <div class="kpi" id="kpi-price"><h3>Avg. Price</h3><div class="val">$0.00</div><div class="trend">Revenue ÷ Units</div></div>
+          <div class="kpi" id="kpi-margin"><h3>Total Margin</h3><div class="val">$0</div><div class="trend">Revenue − Cost</div></div>
+        </section>
+
+        <section class="row">
+          <div class="card widget">
+            <div class="badge">Revenue over Time</div>
+            <canvas id="ts" height="140"></canvas>
+          </div>
+          <div class="card widget">
+            <div class="badge">Revenue by Region</div>
+            <canvas id="bar" height="140"></canvas>
+          </div>
+          <div class="card widget">
+            <div class="badge">Revenue by Product</div>
+            <canvas id="pie" height="140"></canvas>
+          </div>
+        </section>
+
+        <section class="row">
+          <div class="card widget">
+            <div class="badge">Sales Funnel</div>
+            <canvas id="funnel" height="160"></canvas>
+          </div>
+          <div class="card widget">
+            <div class="badge">Simple Forecast</div>
+            <canvas id="forecast" height="160"></canvas>
+          </div>
+          <div class="card widget">
+            <div class="badge">Cohort Heatmap</div>
+            <div id="cohort" class="heatmap"></div>
+          </div>
+        </section>
+
+        <section class="table-wrap card">
+          <div style="display:flex;gap:10px;align-items:center" class="toolbar">
+            <strong>Transactions</strong>
+            <select id="f-region" class="btn"><option value="">All regions</option><option>Canada</option><option>USA</option><option>UK</option></select>
+            <select id="f-channel" class="btn"><option value="">All channels</option><option>Online</option><option>Retail</option><option>Wholesale</option></select>
+            <select id="f-product" class="btn"><option value="">All products</option><option>Widget A</option><option>Widget B</option><option>Widget C</option></select>
+            <button id="btn-clear" class="btn">Clear Filters</button>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th data-key="date">Date</th>
+                <th data-key="region">Region</th>
+                <th data-key="channel">Channel</th>
+                <th data-key="product">Product</th>
+                <th data-key="units">Units</th>
+                <th data-key="price">Price</th>
+                <th data-key="revenue">Revenue</th>
+                <th data-key="margin">Margin</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="assets/app-pro.js"></script>
+</body>
+</html>

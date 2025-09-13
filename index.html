@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Genie — AI Retail Analytics</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="top">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Shop Genie" height="36">
+      <strong>Shop Genie</strong>
+    </div>
+    <div>
+      <a class="btn" href="dashboard.html">Open Dashboard</a>
+    </div>
+  </nav>
+  <div class="container">
+    <section class="hero">
+      <div>
+        <h1>AI‑powered retail analytics, out of the box.</h1>
+        <p>Upload a CSV and instantly get KPIs, charts, funnels, cohorts and forecasts. Zero setup. Built for demos, buyers, and teams.</p>
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <a class="btn" href="dashboard.html">Try Live Demo</a>
+          <a class="btn" href="#features">See Features</a>
+        </div>
+        <div style="margin-top:12px" class="badge">Black &amp; Teal UI</div>
+      </div>
+      <div class="card">
+        <h3 class="section-title">What you get</h3>
+        <ul>
+          <li>Clean KPI cards with revenue, units, margin</li>
+          <li>Charts: time‑series, bar, pie</li>
+          <li>New: Sales funnel, simple forecast, cohort heatmap</li>
+          <li>Sortable table &amp; filters</li>
+          <li>Static hosting on Netlify (no build)</li>
+        </ul>
+      </div>
+    </section>
+
+    <h3 id="features" class="section-title">Feature Highlights</h3>
+    <div class="grid3">
+      <div class="card"><strong>1. CSV In, Insight Out</strong><p>Drop in sales CSVs and see instant summaries and visuals.</p></div>
+      <div class="card"><strong>2. Buyer‑ready</strong><p>Landing page + dashboard make it easy to demo and sell.</p></div>
+      <div class="card"><strong>3. Zero DevOps</strong><p>Drag‑and‑drop to Netlify. That’s it.</p></div>
+    </div>
+
+    <footer>© 2025 Shop Genie — Built for fast sales demos</footer>
+  
+    <h3 class="section-title">Downloads</h3>
+    <div class="grid3">
+      <div class="card"><strong>Pitch Deck (PDF)</strong><p>High-level overview for buyers.</p><a class="btn" href="Shop-Genie-Pitch-Deck.pdf" download>Download Deck</a></div>
+      <div class="card"><strong>One-Pager (PDF)</strong><p>Quick summary for email outreach.</p><a class="btn" href="Shop-Genie-One-Pager.pdf" download>Download One‑Pager</a></div>
+      <div class="card"><strong>Live Demo</strong><p>Open the dashboard and upload a CSV.</p><a class="btn" href="dashboard.html">Open Dashboard</a></div>
+    </div>
+
+    <h3 class="section-title">Get in Touch</h3>
+    <div class="card">
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <input class="btn" type="text" name="name" placeholder="Your name" required>
+          <input class="btn" type="email" name="email" placeholder="Email" required>
+        </div>
+        <textarea class="btn" name="message" rows="4" placeholder="Tell us about your use case…" style="width:100%;margin-top:12px" required></textarea>
+        <div style="margin-top:12px;display:flex;gap:10px">
+          <button class="btn" type="submit">Request a Demo</button>
+          <span class="badge">Netlify Forms enabled</span>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</body>
+</html>
