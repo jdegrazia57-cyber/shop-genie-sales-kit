@@ -3,89 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop Genie — AI-powered retail analytics</title>
+  <title>Shop Genie – AI-powered retail analytics</title>
   <meta name="description" content="Upload a CSV and instantly see KPIs, charts, funnels, cohorts and forecasts. Zero setup." />
   <link rel="icon" href="favicon.svg" />
-  <!-- IMPORTANT: root paths (not assets/...) -->
   <link rel="stylesheet" href="style.css" />
+  <script src="app-pro.js" defer></script>
 </head>
 <body>
-  <header class="container site-header">
+  <header class="site-header">
     <a class="brand" href="index.html">
       <img src="logo.svg" alt="Shop Genie" class="logo" />
       <span>Shop Genie</span>
     </a>
-    <nav class="nav">
+    <nav>
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
-      <a href="dashboard.html">Open Dashboard</a>
-      <a href="#contact" class="btn">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
     </nav>
   </header>
 
-  <main class="container">
+  <main>
     <section class="hero">
       <h1>AI-powered retail analytics, out of the box.</h1>
       <p>Upload a CSV and instantly get KPIs, charts, funnels, cohorts and forecasts. Zero setup. Built for demos, buyers, and teams.</p>
-      <div class="actions">
+      <div class="cta-buttons">
         <a class="btn" href="dashboard.html">Try Live Demo</a>
         <a class="btn secondary" href="#features">See Features</a>
       </div>
     </section>
 
-    <section id="features" class="features grid-3">
-      <div class="card">
-        <h3>Clean KPIs</h3>
-        <p>Revenue, units, margin, AOV, conversion — all calculated on upload.</p>
-      </div>
-      <div class="card">
-        <h3>Charts that matter</h3>
-        <p>Time-series, bar, pie, funnel, quick forecast, and cohort heatmap.</p>
-      </div>
-      <div class="card">
-        <h3>Zero DevOps</h3>
-        <p>Static HTML/CSS/JS. Deploys on Netlify via GitHub in minutes.</p>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing grid-3">
-      <div class="price-card">
-        <h3>Starter</h3>
-        <p class="price">$29/mo</p>
-        <ul><li>100 generations</li><li>Starter analytics</li><li>Email support</li></ul>
-      </div>
-      <div class="price-card featured">
-        <h3>Pro</h3>
-        <p class="price">$79/mo</p>
-        <ul><li>1,000 generations</li><li>Full analytics</li><li>Priority support</li></ul>
-      </div>
-      <div class="price-card">
-        <h3>Elite</h3>
-        <p class="price">$199/mo</p>
-        <ul><li>Unlimited</li><li>Advanced analytics</li><li>SLA & onboarding</li></ul>
-      </div>
-    </section>
-
-    <section class="downloads">
-      <h2>Downloads</h2>
+    <section id="features">
+      <h2>What you get</h2>
       <ul>
-        <li><a href="Shop-Genie-Pitch-Deck.pdf">Pitch Deck (PDF)</a></li>
-        <li><a href="Shop-Genie-One-Pager.pdf">One-Pager (PDF)</a></li>
+        <li>Clean KPI cards with revenue, units, margin</li>
+        <li>Charts: time-series, bar, pie</li>
+        <li>Sales funnel, single forecast, cohort heatmap</li>
+        <li>Sortable table & filters</li>
+        <li>Static hosting on Netlify (no build)</li>
       </ul>
     </section>
 
-    <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>Joseph DeGrazia — <a href="mailto:jdegrazia57@gmail.com">jdegrazia57@gmail.com</a></p>
+    <section id="pricing">
+      <h2>Pricing</h2>
+      <p>One-click demo kit — Free.</p>
+      <p>Pro license — Contact for pricing.</p>
     </section>
   </main>
 
-  <footer class="container footer">
-    <small>© <span id="year"></span> Shop Genie. All rights reserved.</small>
+  <footer>
+    <p>© 2025 Shop Genie — Built for fast sales demos</p>
   </footer>
-
-  <!-- Optional: if your landing needs JS, keep this root path -->
-  <script src="app-pro.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
