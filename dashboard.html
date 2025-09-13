@@ -9,42 +9,65 @@
   <script src="app-pro.js" defer></script>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <a class="brand" href="index.html">
       <img src="logo.svg" alt="Shop Genie" class="logo" />
       <span>Shop Genie</span>
     </a>
-    <nav>
+    <nav class="nav">
       <a href="index.html#features">Features</a>
       <a href="index.html#pricing">Pricing</a>
       <a href="dashboard.html" class="active">Dashboard</a>
     </nav>
   </header>
 
-  <main>
-    <section class="dashboard-intro">
-      <h1>Dashboard</h1>
-      <p>Upload your CSV to explore KPIs, charts, funnels, forecasts, and cohorts.</p>
+  <!-- Dashboard Section -->
+  <main class="dashboard">
+    <h1>Analytics Dashboard</h1>
+    <p>Upload a CSV to get instant KPIs, charts, and forecasts.</p>
+
+    <!-- CSV Upload -->
+    <div class="upload-box">
       <input type="file" id="csvUpload" accept=".csv" />
+      <button onclick="loadCSV()">Upload</button>
+    </div>
+
+    <!-- KPI Cards -->
+    <section id="kpis" class="kpis">
+      <div class="kpi-card">Revenue: $0</div>
+      <div class="kpi-card">Units: 0</div>
+      <div class="kpi-card">Margin: 0%</div>
     </section>
 
-    <section id="kpis" class="kpi-cards"></section>
-
-    <section id="charts" class="charts-grid">
+    <!-- Charts Area -->
+    <section id="charts" class="charts">
+      <h2>Charts</h2>
       <canvas id="salesChart"></canvas>
       <canvas id="funnelChart"></canvas>
       <canvas id="forecastChart"></canvas>
-      <canvas id="heatmapChart"></canvas>
     </section>
 
-    <section id="table">
-      <h2>Sortable Sales Data</h2>
-      <table id="salesTable"></table>
+    <!-- Data Table -->
+    <section id="table" class="table-section">
+      <h2>Data Table</h2>
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Revenue</th>
+            <th>Units</th>
+            <th>Margin</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Shop Genie — Demo Dashboard</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Shop Genie. Analytics made simple.</p>
   </footer>
 </body>
 </html>
