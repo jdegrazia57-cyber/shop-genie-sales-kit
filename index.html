@@ -10,48 +10,74 @@
   <script src="app-pro.js" defer></script>
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <a class="brand" href="index.html">
       <img src="logo.svg" alt="Shop Genie" class="logo" />
       <span>Shop Genie</span>
     </a>
-    <nav>
+    <nav class="nav">
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
-      <a href="dashboard.html">Dashboard</a>
+      <a href="dashboard.html">Demo</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <h1>AI-powered retail analytics, out of the box.</h1>
-      <p>Upload a CSV and instantly get KPIs, charts, funnels, cohorts and forecasts. Zero setup. Built for demos, buyers, and teams.</p>
-      <div class="cta-buttons">
-        <a class="btn" href="dashboard.html">Try Live Demo</a>
-        <a class="btn secondary" href="#features">See Features</a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>AI-powered retail analytics, out of the box.</h1>
+    <p>Upload a CSV and instantly get KPIs, charts, funnels, cohorts, and forecasts. Zero setup. Built for demos, buyers, and teams.</p>
+    <div class="hero-buttons">
+      <a href="dashboard.html" class="btn-primary">Try Live Demo</a>
+      <a href="#features" class="btn-secondary">See Features</a>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <h2>What you get</h2>
+    <ul>
+      <li>Clean KPI cards with revenue, units, margin</li>
+      <li>Charts: time-series, bar, pie</li>
+      <li>New: Sales funnel, forecast, cohort heatmap</li>
+      <li>Sortable table & filters</li>
+      <li>Static hosting on Netlify (no build)</li>
+    </ul>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="pricing">
+    <h2>Pricing</h2>
+    <div class="pricing-tiers">
+      <div class="tier">
+        <h3>Free</h3>
+        <p>$0 / month</p>
+        <p>Basic demo with sample data</p>
       </div>
-    </section>
+      <div class="tier highlight">
+        <h3>Pro</h3>
+        <p>$49 / month</p>
+        <p>CSV uploads, unlimited dashboards</p>
+      </div>
+      <div class="tier">
+        <h3>Enterprise</h3>
+        <p>Custom</p>
+        <p>White-label, advanced forecasting</p>
+      </div>
+    </div>
+  </section>
 
-    <section id="features">
-      <h2>What you get</h2>
-      <ul>
-        <li>Clean KPI cards with revenue, units, margin</li>
-        <li>Charts: time-series, bar, pie</li>
-        <li>Sales funnel, single forecast, cohort heatmap</li>
-        <li>Sortable table & filters</li>
-        <li>Static hosting on Netlify (no build)</li>
-      </ul>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email us at <a href="mailto:jdegrazia57@gmail.com">jdegrazia57@gmail.com</a></p>
+    <p>Phone: 807-630-5979</p>
+  </section>
 
-    <section id="pricing">
-      <h2>Pricing</h2>
-      <p>One-click demo kit — Free.</p>
-      <p>Pro license — Contact for pricing.</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Shop Genie — Built for fast sales demos</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2025 Shop Genie. Built for fast sales demos.</p>
   </footer>
 </body>
 </html>
