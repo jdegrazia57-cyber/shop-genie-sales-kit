@@ -3,54 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Shop Genie — Dashboard</title>
+  <title>Shop Genie – Dashboard</title>
   <link rel="icon" href="favicon.svg" />
-  <!-- IMPORTANT: root paths -->
   <link rel="stylesheet" href="style.css" />
+  <script src="app-pro.js" defer></script>
 </head>
 <body>
-  <header class="container site-header">
+  <header class="site-header">
     <a class="brand" href="index.html">
       <img src="logo.svg" alt="Shop Genie" class="logo" />
       <span>Shop Genie</span>
     </a>
-    <nav class="nav">
+    <nav>
       <a href="index.html#features">Features</a>
       <a href="index.html#pricing">Pricing</a>
       <a href="dashboard.html" class="active">Dashboard</a>
     </nav>
   </header>
 
-  <main class="container">
-    <section class="dash">
-      <h1>Demo Dashboard</h1>
+  <main>
+    <section class="dashboard-intro">
+      <h1>Dashboard</h1>
+      <p>Upload your CSV to explore KPIs, charts, funnels, forecasts, and cohorts.</p>
+      <input type="file" id="csvUpload" accept=".csv" />
+    </section>
 
-      <!-- KPI row (your CSS styles these) -->
-      <div class="kpis">
-        <div class="kpi"><span id="kpi-sales">—</span><label>Sales (30d)</label></div>
-        <div class="kpi"><span id="kpi-conv">—</span><label>Conv. Rate</label></div>
-        <div class="kpi"><span id="kpi-aov">—</span><label>AOV</label></div>
-      </div>
+    <section id="kpis" class="kpi-cards"></section>
 
-      <!-- Simple CSV upload + sample link -->
-      <div class="panel">
-        <h3>Upload CSV</h3>
-        <input id="csvInput" type="file" accept=".csv" />
-        <p class="muted">No file handy? Try the <a href="sample-data.csv">sample-data.csv</a>.</p>
-        <div id="tableMount"></div>
-      </div>
+    <section id="charts" class="charts-grid">
+      <canvas id="salesChart"></canvas>
+      <canvas id="funnelChart"></canvas>
+      <canvas id="forecastChart"></canvas>
+      <canvas id="heatmapChart"></canvas>
+    </section>
 
-      <!-- Canvas or chart mount (your JS can use this) -->
-      <canvas id="chart" width="900" height="320" aria-label="Sales chart"></canvas>
+    <section id="table">
+      <h2>Sortable Sales Data</h2>
+      <table id="salesTable"></table>
     </section>
   </main>
 
-  <footer class="container footer">
-    <small>© <span id="year"></span> Shop Genie.</small>
+  <footer>
+    <p>© 2025 Shop Genie — Demo Dashboard</p>
   </footer>
-
-  <!-- IMPORTANT: root path -->
-  <script src="app-pro.js"></script>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
